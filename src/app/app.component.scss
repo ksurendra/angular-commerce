@@ -1,28 +1,53 @@
-app-root {
-    display: flex;
-    flex-direction: column;
-    position: absolute;
-    top: 56px;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    padding: 30px;
+:host{
+  height: 100%;
+  width: 100%;
+
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: max-content max-content auto max-content;
+  grid-template-areas:
+    "header"
+    "navbar"
+    "content"
+    "footer";
+  // define mobile layout first, then add media queries for the rest
+  // https://gridbyexample.com/examples/example13/
+
 }
-  
-  app-navbar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 2;
-  }
-  
-  app-root > app-component-sidenav {
-    flex: 1;
-  }
-  
-  app-root > app-homepage,
-  app-root > app-guides,
-  app-root > guide-viewer {
-    overflow-y: auto;
-  }
+
+app-header {
+  grid-area: header;
+}
+
+app-navbar {
+  grid-area: navbar;
+}
+
+app-sidebar {
+  grid-area: sidebar;
+}
+
+router-outlet {
+  display: none; // Fix router outlet from influencing the grid
+}
+
+// Attempt at setting an attribute for the injected component
+[content] {
+  grid-area: content;
+  background: greenyellow;
+}
+
+// Attempt at selecting the injected component (the subsequent sibling of the router)
+router-outlet + * {
+  grid-area: content;
+  background: greenyellow; /* DEBUG: CSS is applied as expected if the background changes */
+}
+
+// Attempt at selecting a dynamically injected component
+app-about {
+  background: greenyellow; /* DEBUG: CSS is applied as expected if the background changes */
+}
+
+app-footer {
+  grid-area: footer;
+}

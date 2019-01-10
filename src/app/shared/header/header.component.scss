@@ -1,12 +1,11 @@
 :host {
-  background: #3f51b5;
-  border-top: 1px solid #e1e1e1;
-  padding: 0 16px;
-  box-sizing: border-box;
-  align-content: center;
+    background: #3f51b5;
+    border: 0 solid #a1a1a1;
+    border-bottom-width: 1px;
+    padding: 0 16px;
 }
 
-.footer-headline {
+.header-headline {
   h1 {
     font-size: 56px;
     font-weight: 300;
@@ -22,5 +21,4 @@
     margin: 15px 0 25px 0;
     color: white;
   }
-
 }

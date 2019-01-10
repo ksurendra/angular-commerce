@@ -8,12 +8,24 @@ import { HomeComponent } from './pages/home/home.component';
 import { FooterComponent } from './shared/footer/footer.component';
 
 import {MatCardModule} from '@angular/material/card';
+import { HeaderComponent } from './shared/header/header.component';
+import { NavbarComponent } from './shared/navbar/navbar.component';
+import { AboutComponent } from './pages/about/about.component';
+import { LoginComponent } from './pages/login/login.component';
+import { RegisterComponent } from './pages/register/register.component';
+import { ProductsComponent } from './pages/products/products.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    FooterComponent
+    FooterComponent,
+    HeaderComponent,
+    NavbarComponent,
+    AboutComponent,
+    LoginComponent,
+    RegisterComponent,
+    ProductsComponent
   ],
   imports: [
     BrowserModule,

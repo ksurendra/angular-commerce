@@ -1,20 +1,15 @@
-/* You can add global styles to this file, and also import other style files */
-@import '~@angular/material/theming';
-@import './app-theme';
-@import './styles/api';
-@import './styles/general';
+/* Reset */
+html, body, div {
+    border: 0;
+    margin: 0;
+    padding: 0;
+  }
+  
+  html, body {
+    height: 100%;
+    width: 100%;
+  }
 
-@include mat-core();
-
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
-
-
-
-// Define the light theme.
-$primary: mat-palette($mat-indigo);
-$accent:  mat-palette($mat-pink, A200, A100, A400);
-
-$theme: mat-light-theme($primary, $accent);
-@include angular-material-theme($theme);
-//@include material-docs-app-theme($theme);
+  * {
+    font-family: 'Roboto', sans-serif;
+  }
